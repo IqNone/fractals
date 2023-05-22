@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <title>Mandelbrot</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/mandelbrot.css">
+
+    <script type="application/javascript" src="js/mandelbrot.js"></script>
+    <script type="application/javascript" src="js/main.js"></script>
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav me-auto"></ul>
+            <form class="d-flex" style="margin-bottom: 0">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item dropdown">
+                        <select id = "fractalInput" class="form-select" aria-label="Select fractal type">
+                            <option selected value="Mandelbrot">Mandelbrot</option>
+                            <option value="Julia">Julia</option>
+                        </select>
+                    </li>
+                    <li class="nav-item">
+                        <label class="nav-link" for="zx">Zx</label>
+                    </li>
+                    <li class="nav-item">
+                        <input id="zx" type="range" class="me-sm-2 form-range nav-range" min="-20" max="20" step="1"/>
+                    </li>
+                    <li class="nav-item">
+                        <label class="nav-link" for="zy">Zy</label>
+                    </li>
+                    <li class="nav-item">
+                        <input id="zy" type="range" class="me-sm-2 form-range nav-range" min="-20" max="20" step="1"/>
+                    </li>
+                    <li class="nav-item">
+                        <label class="nav-link" for="it">Iterations</label>
+                    </li>
+                    <li class="nav-item">
+                        <input id="it" type="number" class="form-control me-sm-2" min="10" max="50" step="1" value="10">
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </div>
+</nav>
+<div id = "container" class="container mandelbrot-container">
+    <canvas id = "canvas">
+
+    </canvas>
+</div>
+</body>
+</html>
